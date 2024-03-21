@@ -1,0 +1,44 @@
+.custom-register-section {
+  width: 100%;
+  min-height: 92.8vh;
+  box-sizing: border-box;
+
+  border-top: 0.01px solid transparent;
+  background: linear-gradient(
+    270deg,
+    rgba(254, 144, 119, 1) 30%,
+    rgb(245, 99, 143) 72%
+  );
+
+  > section {
+    background-color: rgba(255, 116, 116, 0.966);
+    width: 500px;
+    margin: 90px auto;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 556px) {
+  .custom-register-section {
+    width: 100%;
+    min-height: 92.8vh;
+    box-sizing: border-box;
+
+    border-top: 0.01px solid transparent;
+    background: linear-gradient(
+      270deg,
+      rgba(254, 144, 119, 1) 30%,
+      rgb(245, 99, 143) 72%
+    );
+
+    > section {
+      background-color: rgba(255, 116, 116, 0.966);
+      width: 80%;
+      margin: 90px auto;
+      color: white;
+
+      > .custom-register > p > a {
+        color: #28a745;
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+@use "template.scss" as temp;
+@use "_colors.scss" as mycolor;
+
+.custom-footer {
+  @include temp.custom-flex(column, wrap, center, center);
+  border-bottom: 5px solid black;
+  .footer-1 {
+    @include temp.custom-flex(row, wrap, space-around, center);
+    // border: 1px solid red;
+    width: 100%;
+  }
+  .footer-2 {
+    @include temp.custom-flex(row, wrap, space-around, center);
+    width: 100%;
+  }
+}

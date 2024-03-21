@@ -1,0 +1,269 @@
+@use "template.scss" as temp;
+@use "_colors.scss" as mycolor;
+.custom-namecard {
+  @include temp.custom-flex(row, wrap, space-between, unset);
+  height: auto;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 25px;
+  > div:nth-child(1) {
+    width: 35%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  > div:nth-child(2) {
+    @include temp.custom-flex(column, wrap, flex-start, unset);
+    width: 63%;
+    padding: 20px;
+    border: 1px solid rgb(236, 231, 231);
+    row-gap: 40px;
+    box-sizing: border-box;
+    > div:nth-child(1) {
+      > p {
+        font-size: 24px;
+      }
+    }
+    > div:nth-child(2) {
+      @include temp.custom-flex(row, wrap, flex-start, unset);
+
+      width: 100%;
+      column-gap: 10%;
+      row-gap: 20px;
+      box-sizing: border-box;
+      > p {
+        width: 45%;
+      }
+    }
+    > div:nth-child(3) {
+      > button {
+        @include temp.custom-btn(
+          none,
+          110px,
+          40px,
+          white,
+          mycolor.$btn-bg-color-green,
+          4px,
+          unset,
+          unset
+        );
+      }
+      > button:nth-child(2) {
+        text-align: center;
+        margin-right: 20px;
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
+// Media Query
+@media only screen and (min-width: 320px) and (max-width: 556px) {
+  .custom-namecard {
+    @include temp.custom-flex(row, wrap, center, unset);
+
+    > div:nth-child(1) {
+      width: 100%;
+    }
+    > div:nth-child(2) {
+      @include temp.custom-flex(column, wrap, flex-start, unset);
+      width: 100%;
+      padding: 20px 15px 20px 15px;
+
+      row-gap: 40px;
+
+      > div:nth-child(1) {
+        > p {
+          font-size: 24px;
+        }
+      }
+      > div:nth-child(2) {
+        @include temp.custom-flex(column, wrap, flex-start, unset);
+
+        width: 100%;
+        column-gap: 10%;
+        row-gap: 20px;
+
+        > p {
+          width: 100%;
+        }
+      }
+      > div:nth-child(3) {
+        > button {
+          @include temp.custom-btn(
+            none,
+            unset,
+            unset,
+            white,
+            mycolor.$btn-bg-color-green,
+            4px,
+            7px,
+            unset
+          );
+          // width: 30%;
+        }
+        > button:nth-child(2) {
+          margin-right: 5px;
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 557px) and (max-width: 776px) {
+  .custom-namecard {
+    @include temp.custom-flex(row, wrap, center, unset);
+
+    > div:nth-child(1) {
+      width: 80%;
+    }
+    > div:nth-child(2) {
+      @include temp.custom-flex(column, wrap, flex-start, unset);
+      width: 80%;
+      padding: 20px;
+
+      row-gap: 40px;
+
+      > div:nth-child(1) {
+        > p {
+          font-size: 24px;
+        }
+      }
+      > div:nth-child(2) {
+        @include temp.custom-flex(row, wrap, flex-start, unset);
+
+        width: 100%;
+        column-gap: 10%;
+        row-gap: 20px;
+
+        > p {
+          width: 45%;
+        }
+      }
+      > div:nth-child(3) {
+        > button {
+          @include temp.custom-btn(
+            none,
+            110px,
+            40px,
+            white,
+            mycolor.$btn-bg-color-green,
+            4px,
+            unset,
+            unset
+          );
+        }
+        > button:nth-child(2) {
+          margin-right: 20px;
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 777px) and (max-width: 992px) {
+  .custom-namecard {
+    > div:nth-child(2) {
+      width: 63%;
+
+      > div:nth-child(1) {
+        > p {
+          font-size: 20px;
+        }
+      }
+      > div:nth-child(2) {
+        > p {
+          font-size: 14px;
+        }
+      }
+      > div:nth-child(3) {
+        > button {
+          @include temp.custom-btn(
+            none,
+            90px,
+            40px,
+            white,
+            mycolor.$btn-bg-color-green,
+            4px,
+            unset,
+            unset
+          );
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+  .custom-namecard {
+    > div:nth-child(2) {
+      width: 63%;
+
+      > div:nth-child(1) {
+        > p {
+          font-size: 20px;
+        }
+      }
+      > div:nth-child(2) {
+        > p {
+          font-size: 14px;
+        }
+      }
+      > div:nth-child(3) {
+        > button {
+          @include temp.custom-btn(
+            none,
+            90px,
+            40px,
+            white,
+            mycolor.$btn-bg-color-green,
+            4px,
+            unset,
+            unset
+          );
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+  .custom-namecard {
+    margin-bottom: 25px;
+
+    > div:nth-child(2) {
+      width: 63%;
+
+      > div:nth-child(1) {
+        > p {
+          font-size: 20px;
+        }
+      }
+      > div:nth-child(2) {
+        > p {
+          font-size: 14px;
+        }
+      }
+      > div:nth-child(3) {
+        > button {
+          @include temp.custom-btn(
+            none,
+            90px,
+            40px,
+            white,
+            mycolor.$btn-bg-color-green,
+            4px,
+            unset,
+            unset
+          );
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

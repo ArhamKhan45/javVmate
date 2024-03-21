@@ -1,0 +1,32 @@
+@mixin custom-flex($dir: row, $wrap: wrap, $jus, $ali) {
+  display: flex;
+  flex-direction: $dir;
+  flex-wrap: $wrap;
+  justify-content: $jus;
+  align-items: $ali;
+}
+
+@mixin custom-hover($color, $bgcolor) {
+  color: $color;
+  background-color: $bgcolor;
+}
+
+@mixin custom-btn(
+  $bor: unset,
+  $w: unset,
+  $h: unset,
+  $clr: unset,
+  $bgclr: unset,
+  $radius: unset,
+  $p: unset,
+  $m: unset
+) {
+  border: $bor;
+  width: $w;
+  height: $h;
+  color: $clr;
+  background-color: $bgclr;
+  border-radius: $radius;
+  padding: $p;
+  margin: $m;
+}

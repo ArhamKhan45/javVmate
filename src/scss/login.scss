@@ -1,0 +1,99 @@
+@use "template.scss" as temp;
+@use "_colors.scss" as mycolor;
+.custom-login {
+  @include temp.custom-flex(row, wrap, center, center);
+  min-height: 100vh;
+  background: linear-gradient(
+    270deg,
+    rgba(128, 119, 254, 0.8) 30%,
+    rgba(114, 182, 243, 0.8) 72%
+  );
+}
+
+.login-container {
+  background: rgb(255, 254, 254);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  > form {
+    @include temp.custom-flex(column, wrap, center, center);
+  }
+}
+.register-container {
+  text-align: center;
+
+  > p {
+    color: black;
+    > a {
+      color: black;
+    }
+  }
+  > a {
+    > button {
+      margin-top: 10px;
+      width: 80%;
+      padding: 10px;
+      box-sizing: border-box;
+      border: none;
+      border-radius: 4px;
+      background-color: #4caf50;
+      color: #fff;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+  }
+}
+.login-container h2 {
+  text-align: center;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: black;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-group button {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 4px;
+  background-color: #4caf50;
+  color: #fff;
+  cursor: pointer;
+}
+
+.form-group button:hover,
+.register-container > button:hover {
+  background-color: #45a049;
+}
+
+// media query
+@media only screen and (min-width: 320px) and (max-width: 556px) {
+}
+@media only screen and (min-width: 557px) and (max-width: 776px) {
+}
+@media only screen and (min-width: 777px) and (max-width: 992px) {
+}
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+}
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+}

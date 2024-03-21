@@ -1,0 +1,75 @@
+@use "template.scss" as temp;
+@use "_colors.scss" as mycolor;
+.my-nav {
+  @include temp.custom-flex(row, wrap, space-between, center);
+  box-shadow: 0 5px 8px rgb(231, 229, 224);
+  padding: 7.5px 150px;
+  //   border-bottom: 2px solid black;
+  .flex-item-1 {
+    > a {
+      text-decoration: none;
+      > h1 {
+        background: mycolor.$sitename-gradient-color;
+        font-family: "Dancing Script", cursive;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+
+  .flex-item-2 {
+    width: 300px;
+    @include temp.custom-flex(row, wrap, space-between, unset);
+
+    div {
+      //   border: mycolor.$border-blue;
+      button {
+        background-color: mycolor.$site-red;
+        color: mycolor.$site-white;
+        padding: 8px 12px;
+        border-radius: 16px;
+        border: none;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .my-nav {
+    padding: 6.5px 5px;
+    h1 {
+      font-size: 20px;
+    }
+
+    .flex-item-1 {
+      width: 100px;
+      border: 1px solid red;
+      > a {
+        text-decoration: none;
+        > h1 {
+          background: mycolor.$sitename-gradient-color;
+          font-family: "Dancing Script", cursive;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+    .flex-item-2 {
+      @include temp.custom-flex(row, wrap, space-between, unset);
+      width: 180px;
+
+      div {
+        button {
+          font-size: 10px;
+          padding: 8px 5px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 776px) {
+  .my-nav {
+    padding: 6.5px 30px;
+  }
+}

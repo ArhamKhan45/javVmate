@@ -1,0 +1,47 @@
+.custom-register {
+  padding: 30px;
+  box-sizing: border-box;
+  form {
+    > div {
+      margin-top: 15px;
+      > label {
+        display: inline-block;
+        margin-bottom: 5px;
+      }
+      > input {
+        width: 100%;
+        padding: 8px 25px 8px 15px;
+        border-radius: 5px;
+        background-color: #f8f9fa;
+        outline: 1px solid #f8f9fa;
+        border: none;
+
+        &::placeholder {
+          color: rgb(85, 84, 84);
+        }
+      }
+      input[type="number"] {
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+          appearance: none;
+        }
+      }
+    }
+    > button {
+      margin-top: 15px;
+      width: 100%;
+      color: white;
+      background-color: #28a745;
+      border: none;
+      padding: 8px 25px 8px 15px;
+      border-radius: 5px;
+    }
+  }
+  > p {
+    margin-top: 15px;
+    a {
+      text-decoration: none;
+      color: #007bff;
+    }
+  }
+}

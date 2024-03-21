@@ -1,0 +1,11 @@
+@use "template.scss" as temp;
+@use "_colors.scss" as mycolor;
+.Matrimony-Profile-For {
+  > label {
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+  // .select-gender {
+  //   background-color: rgb(72, 255, 0);
+  // }
+}
