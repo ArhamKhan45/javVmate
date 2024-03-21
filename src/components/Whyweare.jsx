@@ -19,7 +19,7 @@ export default function Whyweare() {
           <span> &#x2714;</span> 100% verified mobile numbers
         </li>
         <li>
-          <span> &#x2714;</span> Our largest number of profiles increases your
+          <span>&#x2714;</span> Our largest number of profiles increases your
           chances of meeting the right person
         </li>
         <li>
